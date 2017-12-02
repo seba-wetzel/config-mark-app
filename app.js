@@ -1,13 +1,13 @@
 var fs = require("fs");
-const {exec} = require('child_process');
-var Config = require("./config.json");
+const {execSync} = require('child_process');
+let Config = JSON.parse(fs.readFileSync("./config.json"));
 
-exec('ls', (err, stdout, stderr) => {
-  if (err) {
-    console.log("Error trying to exec");
-    return;
-  }
-  console.log(stdout);
-})
+if (!Config.isTouchConfigured) {
+  Config.configTouchSettings = execSync('./touchConfigurator/xtcal -geometry 1920x1080').toString().trim();
+  let configurator = 'xinput set-prop ' + Config.touchName + " 'Coordinate Transformation Matrix' " + Config.configTouchSettings;
+  execSync(configurator);
+  Config.isTouchConfigured = true;
+  fs.writeFileSync('config.json', JSON.stringify(Config, null, 2));
+}
 
 console.log(Config.isTouchConfigured);

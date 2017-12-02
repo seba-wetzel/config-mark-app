@@ -1,5 +1,6 @@
 {
- "isTouchConfigured": false,
- "configTouchSettings": null,
- "appDir": null
+  "isTouchConfigured": true,
+  "appDir": null,
+  "configTouchSettings": "1,761822 0,006804 -0,640806 0,018976 1,831716 -0,495099 0 0 1",
+  "touchName": "'SILICON LABORATORIES C8051F3xx Development Board'"
 }
