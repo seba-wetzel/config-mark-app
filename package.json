@@ -1,0 +1,19 @@
+{
+  "name": "config-mark-app",
+  "version": "1.0.0",
+  "description": "Configurator for kiosk screen",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seba-wetzel/markApp.git"
+  },
+  "author": "Sebastian Wetzel",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/seba-wetzel/markApp/issues"
+  },
+  "homepage": "https://github.com/seba-wetzel/markApp#readme"
+}
