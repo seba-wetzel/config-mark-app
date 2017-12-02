@@ -1,0 +1,3 @@
+[submodule "touchConfigurator"]
+	path = touchConfigurator
+	url = https://github.com/xtforever/xtcal.git
