@@ -1,4 +1,5 @@
 {
+  "isAutoStart":false,
   "isTouchConfigured": false,
   "appDir": null,
   "configTouchSettings": null,
