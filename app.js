@@ -19,7 +19,9 @@ function configTouch() {
 }
 
 if (!Config.isTouchConfigured || (Config.configTouchSettings == null)) {
-  Config.configTouchSettings = execSync('./touchConfigurator/xtcal -geometry 1920x1080').toString().trim();
+  const calibrator = './touchConfigurator/xtcal -geometry '+ Config.screenGeometry;
+  console.log(calibrator);
+  Config.configTouchSettings = execSync(calibrator).toString().trim();
   Config.isTouchConfigured = true;
   fs.writeFileSync('config.json', JSON.stringify(Config, null, 2));
   console.log("Guardando configuraciones \nTouch Settings= " + Config.configTouchSettings);
