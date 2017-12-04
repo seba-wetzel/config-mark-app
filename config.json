@@ -1,6 +1,6 @@
 {
-  "isAutoStart":false,
-  "isTouchConfigured": false,
+  "isAutoStart": false,
+  "isTouchConfigured": true,
   "appDir": null,
   "configTouchSettings": null,
   "touchName": "'SILICON LABORATORIES C8051F3xx Development Board'"
