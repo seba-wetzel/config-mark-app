@@ -7,7 +7,8 @@ function save() {
 }
 
 function calibrate() {
-  Config.configTouchSettings = execSync('./touchConfigurator/xtcal -geometry 1920x1080').toString().trim();
+  const settings = './touchConfigurator/xtcal -geometry ' + Config.screenGeometry;
+  Config.configTouchSettings = execSync(settings).toString().trim();
   console.log("Guardando configuraciones \nTouch Settings= " + Config.configTouchSettings);
 }
 
@@ -21,6 +22,7 @@ function configTouch() {
     calibrate();
   }
   console.log("Tactil configurado!");
+  Config.isTouchConfigured = true;
 }
 
 if (!Config.isTouchConfigured || (Config.configTouchSettings == null)) {
@@ -29,9 +31,10 @@ if (!Config.isTouchConfigured || (Config.configTouchSettings == null)) {
 }
 
 configTouch();
+save();
 
 if (Config.isAutoStart) {
-  const app = 'node ' + Config.appDir;
+  const app = 'cd ' + Config.appDir + ' && npm start';
   try {
     var exec = execSync(app);
   } catch (err) {

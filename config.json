@@ -1,8 +1,8 @@
 {
-  "isAutoStart": false,
-  "isTouchConfigured": false,
-  "appDir": null,
-  "configTouchSettings": "-0.000697 0.805058 0.088073 -1.055664 -0.036215 1.054242 0 0 1",
+  "isAutoStart": true,
+  "isTouchConfigured": true,
+  "appDir": "app-dir",
+  "configTouchSettings": "0.026271 0.922757 0.027107 -1.101404 -0.026969 1.071374 0 0 1",
   "touchName": "'SILICON LABORATORIES C8051F3xx Development Board'",
   "screenGeometry": "1080x1920"
 }
