@@ -20,7 +20,7 @@ function configTouch() {
     Config.configTouchSettings = null;
     calibrate();
   }
-  console.log("Tactil configurado");
+  console.log("Tactil configurado!");
 }
 
 if (!Config.isTouchConfigured || (Config.configTouchSettings == null)) {
