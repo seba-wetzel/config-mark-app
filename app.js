@@ -2,7 +2,7 @@ var fs = require("fs");
 const {execSync} = require('child_process');
 let Config = JSON.parse(fs.readFileSync("./config.json"));
 
-funtion save() {
+function save() {
   fs.writeFileSync('config.json', JSON.stringify(Config, null, 2));
 }
 
